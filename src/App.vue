@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header msg="Welcome to Your Vue.js Calculator App" />
+    <Display />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header/Header.vue";
+import Header from "./components/Header/Header";
+import Display from "./components/Display/Display";
 
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    Display
   }
 };
 </script>
