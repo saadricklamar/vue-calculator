@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <Header msg="Welcome to Your Vue.js Calculator App"/>
+    <Header msg="Welcome to Your Vue.js Calculator App" />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import Header from "./components/Header/Header.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Header
   }
-}
+};
 </script>
 
 <style>
 body {
   margin: 0 auto;
-  background-color: #D8E9DC;
+  background-color: #d8e9dc;
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
