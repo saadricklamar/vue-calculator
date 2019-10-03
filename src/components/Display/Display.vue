@@ -16,7 +16,7 @@ export default {
   justify-content: center;
 }
 input {
-  height: 100px;
+  height: 80px;
   width: 400px;
   background-color: #42b983;
   color: white;
