@@ -1,5 +1,7 @@
 <template>
-  <input type="text" value="0" />
+  <section class="Display">
+    <input type="text" value="0" />
+  </section>
 </template>
 
 <script>
@@ -9,15 +11,18 @@ export default {
 </script>
 
 <style scoped>
+.Display {
+  display: flex;
+  justify-content: center;
+}
 input {
   height: 100px;
   width: 500px;
-  margin-right: 5%;
-  margin-top: 2%;
   background-color: black;
   color: white;
   font-size: 3rem;
   padding-right: 2%;
   text-align: right;
+  margin-top: 5%;
 }
 </style>

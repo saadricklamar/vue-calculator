@@ -23,6 +23,10 @@ export default {
 
 h1 {
   color: #42b983;
-  margin-top: 10%;
+  margin-top: 2%;
+}
+
+img {
+  height: 100px;
 }
 </style>
