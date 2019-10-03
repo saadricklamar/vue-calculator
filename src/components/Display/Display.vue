@@ -23,7 +23,7 @@ input {
   font-size: 3rem;
   padding-right: 2%;
   text-align: right;
-  margin-top: 5%;
+  margin-top: 3%;
   border-radius: 5px;
 }
 </style>
