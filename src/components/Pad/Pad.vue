@@ -3,6 +3,7 @@
     <article class="buttons">
       <FirstRowButtons />
       <SecondRowButtons />
+      <ThirdRowButtons />
     </article>
   </section>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import FirstRowButtons from "../FirstRowButtons/FirstRowButtons";
 import SecondRowButtons from "../SecondRowButtons/SecondRowButtons";
+import ThirdRowButtons from "../ThirdRowButtons/ThirdRowButtons";
 
 export default {
   name: "Pad",
   components: {
     FirstRowButtons,
-    SecondRowButtons
+    SecondRowButtons,
+    ThirdRowButtons
   }
 };
 </script>
@@ -28,7 +31,7 @@ export default {
 
 article {
   width: 425px;
-  height: 400px;
+  height: 450px;
   background-color: #556884;
   border-radius: 5px;
 }
