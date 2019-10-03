@@ -4,6 +4,7 @@
       <FirstRowButtons />
       <SecondRowButtons />
       <ThirdRowButtons />
+      <FourthRowButtons />
     </article>
   </section>
 </template>
@@ -12,13 +13,15 @@
 import FirstRowButtons from "../FirstRowButtons/FirstRowButtons";
 import SecondRowButtons from "../SecondRowButtons/SecondRowButtons";
 import ThirdRowButtons from "../ThirdRowButtons/ThirdRowButtons";
+import FourthRowButtons from "../FourthRowButtons/FourthRowButtons";
 
 export default {
   name: "Pad",
   components: {
     FirstRowButtons,
     SecondRowButtons,
-    ThirdRowButtons
+    ThirdRowButtons,
+    FourthRowButtons
   }
 };
 </script>
