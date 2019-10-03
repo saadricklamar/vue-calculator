@@ -21,6 +21,7 @@ button {
   font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 3%;
 }
 
 .divide {
