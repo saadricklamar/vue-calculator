@@ -2,17 +2,20 @@
   <section class="pad">
     <article class="buttons">
       <FirstRowButtons />
+      <SecondRowButtons />
     </article>
   </section>
 </template>
 
 <script>
 import FirstRowButtons from "../FirstRowButtons/FirstRowButtons";
+import SecondRowButtons from "../SecondRowButtons/SecondRowButtons";
 
 export default {
   name: "Pad",
   components: {
-    FirstRowButtons
+    FirstRowButtons,
+    SecondRowButtons
   }
 };
 </script>
