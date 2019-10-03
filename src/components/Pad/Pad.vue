@@ -1,14 +1,19 @@
 <template>
   <section class="pad">
     <article class="buttons">
-
+      <FirstRowButtons />
     </article>
   </section>
 </template>
 
 <script>
+import FirstRowButtons from "../FirstRowButtons/FirstRowButtons";
+
 export default {
-  name: "Pad"
+  name: "Pad",
+  components: {
+    FirstRowButtons
+  }
 };
 </script>
 
@@ -19,9 +24,9 @@ export default {
 }
 
 article {
-  width: 525px;
+  width: 425px;
   height: 400px;
-  background-color: #42b983;
+  background-color: #556884;
   border-radius: 5px;
 }
 </style>
