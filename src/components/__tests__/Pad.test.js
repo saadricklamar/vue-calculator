@@ -1,8 +1,8 @@
 import { mount } from "@vue/test-utils";
-import Header from "../Header/Header.vue";
+import Pad from "../Pad/Pad";
 
-describe("Header", () => {
-  const wrapper = mount(Header);
+describe("Pad", () => {
+  const wrapper = mount(Pad);
   it("should match the snapshot", () => {
     expect(wrapper.isVueInstance()).toMatchSnapshot();
   });
