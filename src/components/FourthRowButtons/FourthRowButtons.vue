@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .add {
   background-color: #42b983;
   color: white;

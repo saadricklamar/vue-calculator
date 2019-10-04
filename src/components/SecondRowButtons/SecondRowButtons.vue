@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .multiply {
   background-color: #42b983;
   color: white;

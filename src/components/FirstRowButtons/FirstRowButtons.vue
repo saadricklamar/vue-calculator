@@ -24,6 +24,11 @@ button {
   background-color: rgb(243, 241, 213);
 }
 
+button:hover {
+ background-color: rgb(79,142,191);
+ color: white;
+}
+
 .divide {
   background-color: #42b983;
   color: white;
