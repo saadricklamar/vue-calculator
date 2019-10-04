@@ -5,6 +5,7 @@
       <SecondRowButtons />
       <ThirdRowButtons />
       <FourthRowButtons />
+      <FifthRowButtons />
     </article>
   </section>
 </template>
@@ -14,6 +15,7 @@ import FirstRowButtons from "../FirstRowButtons/FirstRowButtons";
 import SecondRowButtons from "../SecondRowButtons/SecondRowButtons";
 import ThirdRowButtons from "../ThirdRowButtons/ThirdRowButtons";
 import FourthRowButtons from "../FourthRowButtons/FourthRowButtons";
+import FifthRowButtons from "../FifthRowButtons/FifthRowButtons";
 
 export default {
   name: "Pad",
@@ -21,7 +23,8 @@ export default {
     FirstRowButtons,
     SecondRowButtons,
     ThirdRowButtons,
-    FourthRowButtons
+    FourthRowButtons,
+    FifthRowButtons
   }
 };
 </script>
@@ -34,7 +37,7 @@ export default {
 
 article {
   width: 425px;
-  height: 450px;
+  height: 475px;
   background-color: #556884;
   border-radius: 5px;
 }
