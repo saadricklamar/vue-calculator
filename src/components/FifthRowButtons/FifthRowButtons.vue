@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .equals {
   background-color: #42b983;
   color: white;
