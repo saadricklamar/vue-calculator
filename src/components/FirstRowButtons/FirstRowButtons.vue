@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 button {
   height: 75px;
   width: 75px;
@@ -21,11 +21,15 @@ button {
   font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 3%;
+  background-color: rgb(243, 241, 213);
 }
 
 .divide {
   background-color: #42b983;
   color: white;
+}
+
+.first-row-buttons {
+  margin-top: 3%;
 }
 </style>
