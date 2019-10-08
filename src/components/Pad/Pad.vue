@@ -2,7 +2,7 @@
   <section class="pad">
     <article class="buttons">
       <FirstRowButtons />
-      <SecondRowButtons />
+      <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons />
       <FourthRowButtons />
       <FifthRowButtons />
@@ -25,7 +25,8 @@ export default {
     ThirdRowButtons,
     FourthRowButtons,
     FifthRowButtons
-  }
+  },
+  props: ["displayBtnValue", "counter"]
 };
 </script>
 
