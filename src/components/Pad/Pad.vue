@@ -3,7 +3,7 @@
     <article class="buttons">
       <FirstRowButtons />
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
-      <ThirdRowButtons />
+      <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons />
       <FifthRowButtons />
     </article>
