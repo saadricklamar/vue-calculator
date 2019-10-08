@@ -5,7 +5,7 @@
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
-      <FifthRowButtons />
+      <FifthRowButtons v-bind:displayBtnValue="displayBtnValue" />
     </article>
   </section>
 </template>
