@@ -1,6 +1,6 @@
 <template>
   <section class="fifth-row-buttons">
-    <button class="zero">0</button>
+    <button v-on:click="displayBtnValue($event)" class="zero" value="0">0</button>
     <button class="decimal">.</button>
     <button class="equals">=</button>
   </section>
@@ -8,7 +8,8 @@
 
 <script>
 export default {
-  name: "FifthRowButtons"
+  name: "FifthRowButtons",
+  props: ["displayBtnValue"]
 };
 </script>
 
