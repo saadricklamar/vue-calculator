@@ -1,6 +1,6 @@
 <template>
   <section class="first-row-buttons">
-    <button class="ac">AC</button>
+    <button v-on:click="clearDisplay()" class="ac">AC</button>
     <button class="plus-minus">+/-</button>
     <button class="percent">%</button>
     <button class="divide">/</button>
@@ -9,7 +9,8 @@
 
 <script>
 export default {
-  name: "FirstRowButtons"
+  name: "FirstRowButtons",
+  props: ["clearDisplay"]
 };
 </script>
 

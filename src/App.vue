@@ -2,7 +2,7 @@
   <div id="app">
     <Header msg="Welcome to Your Vue.js Calculator App" />
     <Display v-bind:counter="counter" />
-    <Pad v-bind:displayBtnValue="displayBtnValue" />
+    <Pad :displayBtnValue="displayBtnValue" v-bind:clearDisplay="clearDisplay" />
   </div>
 </template>
 
@@ -31,6 +31,9 @@ export default {
       } else {
         this.counter = this.counter + e.target.value;
       }
+    },
+    clearDisplay: function() {
+      this.counter = 0;
     }
   }
 };
