@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header msg="Welcome to Your Vue.js Calculator App" />
-    <Display />
-    <Pad />
+    <Display v-bind:counter="counter" />
+    <Pad v-bind:displayBtnValue="displayBtnValue" />
   </div>
 </template>
 
@@ -17,6 +17,21 @@ export default {
     Header,
     Display,
     Pad
+  },
+  data() {
+    return {
+      counter: 0
+    };
+  },
+  methods: {
+    displayBtnValue: function(e) {
+      if (this.counter === 0) {
+        this.counter = "";
+        this.counter = this.counter + e.target.value;
+      } else {
+        this.counter = this.counter + e.target.value;
+      }
+    }
   }
 };
 </script>

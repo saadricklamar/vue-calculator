@@ -1,12 +1,13 @@
 <template>
   <section class="display">
-    <input type="text" value="0" />
+    <input type="text" :value="counter" disabled />
   </section>
 </template>
 
 <script>
 export default {
-  name: "Display"
+  name: "Display",
+  props: ["counter"]
 };
 </script>
 
