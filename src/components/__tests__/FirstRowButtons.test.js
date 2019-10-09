@@ -11,10 +11,10 @@ describe("FirstRowButtons", () => {
     expect(wrapper.isVueInstance()).toMatchSnapshot();
   });
   it("should have the props of clearDisplay", () => {
-    expect(wrapper.props('clearDisplay')).toBeTruthy();
-  })
+    expect(wrapper.props("clearDisplay")).toBeTruthy();
+  });
   it("should call clearDisplay when AC is clicked", () => {
-    wrapper.vm.clearDisplay  = jest.fn();
+    wrapper.vm.clearDisplay = jest.fn();
     wrapper.find("button.ac").trigger("click");
     expect(wrapper.vm.clearDisplay).toHaveBeenCalled();
   });
