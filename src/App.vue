@@ -2,7 +2,11 @@
   <div id="app">
     <Header msg="Welcome to Your Vue.js Calculator App" />
     <Display v-bind:counter="counter" />
-    <Pad :displayBtnValue="displayBtnValue" v-bind:clearDisplay="clearDisplay" />
+    <Pad
+      v-bind:displayBtnValue="displayBtnValue"
+      v-bind:clearDisplay="clearDisplay"
+      v-bind:makeDecimal="makeDecimal"
+    />
   </div>
 </template>
 
@@ -34,6 +38,10 @@ export default {
     },
     clearDisplay: function() {
       this.counter = 0;
+    },
+    makeDecimal: function() {
+      let stringifiedCounter = String(this.counter);
+      stringifiedCounter.includes(".") ?  true : this.counter = this.counter + ".";
     }
   }
 };

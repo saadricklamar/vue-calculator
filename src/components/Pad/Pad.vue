@@ -5,7 +5,9 @@
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
-      <FifthRowButtons v-bind:displayBtnValue="displayBtnValue" />
+      <FifthRowButtons v-bind:displayBtnValue="displayBtnValue" 
+                       v-bind:makeDecimal="makeDecimal"
+      />
     </article>
   </section>
 </template>
@@ -26,7 +28,7 @@ export default {
     FourthRowButtons,
     FifthRowButtons
   },
-  props: ["displayBtnValue", "counter", "clearDisplay"]
+  props: ["displayBtnValue", "counter", "clearDisplay", "makeDecimal"]
 };
 </script>
 
