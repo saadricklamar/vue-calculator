@@ -23,6 +23,11 @@ describe("App", () => {
     wrapper.find("button.percent").trigger("click");
     expect(wrapper.vm.counter).toBe(0.06);
   });
+  it("should turn a number into a decimal when . is clicked", () => {
+    wrapper.vm.counter = 0;
+    wrapper.find("button.decimal").trigger("click");
+    expect(wrapper.vm.counter).toBe("0.");
+  });
   it("should display 1 when the button 1 is clicked", () => {
     wrapper.vm.counter = 0;
     wrapper.find("button.one").trigger("click");
