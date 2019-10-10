@@ -18,13 +18,13 @@ export default {
 }
 input {
   height: 80px;
-  width: 400px;
+  width: 31%;
   background-color: #42b983;
   color: white;
   font-size: 3rem;
   padding-right: 2%;
   text-align: right;
-  margin-top: 3%;
+  margin-top: 1%;
   border-radius: 5px;
 }
 </style>

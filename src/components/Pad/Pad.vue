@@ -48,9 +48,10 @@ export default {
 }
 
 article {
-  width: 425px;
-  height: 475px;
+  width: 33%;
+  height: 490px;
   background-color: #556884;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 </style>
