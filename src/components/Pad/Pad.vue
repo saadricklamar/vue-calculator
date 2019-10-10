@@ -1,7 +1,9 @@
 <template>
   <section class="pad">
     <article class="buttons">
-      <FirstRowButtons v-bind:clearDisplay="clearDisplay"/>
+      <FirstRowButtons v-bind:clearDisplay="clearDisplay"
+                       v-bind:makeNegativePositive="makeNegativePositive"
+      />
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
@@ -28,7 +30,12 @@ export default {
     FourthRowButtons,
     FifthRowButtons
   },
-  props: ["displayBtnValue", "counter", "clearDisplay", "makeDecimal"]
+  props: ["displayBtnValue", 
+          "counter", 
+          "clearDisplay", 
+          "makeDecimal", 
+          "makeNegativePositive"
+          ]
 };
 </script>
 
