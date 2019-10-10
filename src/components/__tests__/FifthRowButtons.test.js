@@ -17,4 +17,9 @@ describe("FifthRowButtons", () => {
   it("should have the props of makeDecimal", () => {
     expect(wrapper.props("makeDecimal")).toBeTruthy();
   });
+  it("should call displayBtnValue when 0 is clicked", () => {
+    wrapper.vm.displayBtnValue = jest.fn();
+    wrapper.find("button.zero").trigger("click");
+    expect(wrapper.vm.displayBtnValue).toHaveBeenCalled();
+  });
 });
