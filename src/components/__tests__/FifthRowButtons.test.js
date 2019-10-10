@@ -22,4 +22,9 @@ describe("FifthRowButtons", () => {
     wrapper.find("button.zero").trigger("click");
     expect(wrapper.vm.displayBtnValue).toHaveBeenCalled();
   });
+  it("should call makeDecimal when . is clicked", () => {
+    wrapper.vm.makeDecimal = jest.fn();
+    wrapper.find("button.decimal").trigger("click");
+    expect(wrapper.vm.makeDecimal).toHaveBeenCalled();
+  });
 });
