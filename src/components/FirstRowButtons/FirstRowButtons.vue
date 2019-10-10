@@ -2,7 +2,7 @@
   <section class="first-row-buttons">
     <button v-on:click="clearDisplay()" class="ac">AC</button>
     <button v-on:click="makeNegativePositive()" class="plus-minus">+/-</button>
-    <button class="percent">%</button>
+    <button v-on:click="makePercent()" class="percent">%</button>
     <button class="divide">/</button>
   </section>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
   name: "FirstRowButtons",
-  props: ["clearDisplay", "makeNegativePositive"]
+  props: ["clearDisplay", "makeNegativePositive", "makePercent"]
 };
 </script>
 

@@ -7,6 +7,7 @@
       v-bind:clearDisplay="clearDisplay"
       v-bind:makeDecimal="makeDecimal"
       v-bind:makeNegativePositive="makeNegativePositive"
+      v-bind:makePercent="makePercent"
     />
   </div>
 </template>
@@ -51,6 +52,9 @@ export default {
       stringifiedCounter.includes("-")
         ? (this.counter = stringifiedCounter.replace("-", ""))
         : (this.counter = "-" + this.counter);
+    },
+    makePercent: function() {
+      this.counter = this.counter / 100;
     }
   }
 };
