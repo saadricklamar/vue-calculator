@@ -6,6 +6,7 @@
       v-bind:displayBtnValue="displayBtnValue"
       v-bind:clearDisplay="clearDisplay"
       v-bind:makeDecimal="makeDecimal"
+      v-bind:makeNegativePositive="makeNegativePositive"
     />
   </div>
 </template>
@@ -41,7 +42,15 @@ export default {
     },
     makeDecimal: function() {
       let stringifiedCounter = String(this.counter);
-      stringifiedCounter.includes(".") ?  true : this.counter = this.counter + ".";
+      stringifiedCounter.includes(".")
+        ? true
+        : (this.counter = this.counter + ".");
+    },
+    makeNegativePositive: function() {
+      let stringifiedCounter = String(this.counter);
+      stringifiedCounter.includes("-")
+        ? (this.counter = stringifiedCounter.replace("-", ""))
+        : (this.counter = "-" + this.counter);
     }
   }
 };
