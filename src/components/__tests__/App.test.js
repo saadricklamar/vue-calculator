@@ -28,6 +28,16 @@ describe("App", () => {
     wrapper.find("button.decimal").trigger("click");
     expect(wrapper.vm.counter).toBe("0.");
   });
+  it("should turn a number negative when +/- is clicked", () => {
+    wrapper.vm.counter = 9;
+    wrapper.find("button.plus-minus").trigger("click");
+    expect(wrapper.vm.counter).toBe("-9");
+  });
+  it("should turn a negative number positive when +/- is clicked", () => {
+    wrapper.vm.counter = -67;
+    wrapper.find("button.plus-minus").trigger("click");
+    expect(wrapper.vm.counter).toBe("67");
+  });
   it("should display 1 when the button 1 is clicked", () => {
     wrapper.vm.counter = 0;
     wrapper.find("button.one").trigger("click");
