@@ -8,6 +8,7 @@
       v-bind:makeDecimal="makeDecimal"
       v-bind:makeNegativePositive="makeNegativePositive"
       v-bind:makePercent="makePercent"
+      v-bind:division="division" 
     />
   </div>
 </template>
@@ -26,7 +27,8 @@ export default {
   },
   data() {
     return {
-      counter: 0
+      counter: 0,
+      counter2: 0
     };
   },
   methods: {
@@ -55,6 +57,11 @@ export default {
     },
     makePercent: function() {
       this.counter = this.counter / 100;
+    },
+    division: function() {
+      let num1 = this.counter;
+      this.counter = ""
+      
     }
   }
 };

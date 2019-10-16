@@ -4,6 +4,7 @@
       <FirstRowButtons v-bind:clearDisplay="clearDisplay"
                        v-bind:makeNegativePositive="makeNegativePositive"
                        v-bind:makePercent="makePercent"
+                       v-bind:division="division"
       />
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
@@ -36,7 +37,8 @@ export default {
           "clearDisplay", 
           "makeDecimal", 
           "makeNegativePositive",
-          "makePercent"
+          "makePercent",
+          "division"
           ]
 };
 </script>
