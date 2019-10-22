@@ -4,6 +4,7 @@ This is a project I decided to take up on my spare time to keep my Vue.js skills
 
 ## Teck Stack
 
+* JavaScript
 * Vue.js
 * Vue Test Utilities
 * Jest/Enzyme
