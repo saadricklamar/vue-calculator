@@ -3,14 +3,14 @@
     <button v-on:click="displayBtnValue($event)" class="seven" value="7">7</button>
     <button v-on:click="displayBtnValue($event)" class="eight" value="8">8</button>
     <button v-on:click="displayBtnValue($event)" class="nine" value="9">9</button>
-    <button class="multiply">x</button>
+    <button v-on:click="multiply($event)" class="multiply" value="x">x</button>
   </section>
 </template>
 
 <script>
 export default {
   name: "SecondRowButtons",
-  props: ["displayBtnValue"]
+  props: ["displayBtnValue", "multiply"]
 };
 </script>
 
