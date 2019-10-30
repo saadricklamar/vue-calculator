@@ -1,16 +1,19 @@
 <template>
   <section class="pad">
     <article class="buttons">
-      <FirstRowButtons v-bind:clearDisplay="clearDisplay"
-                       v-bind:makeNegativePositive="makeNegativePositive"
-                       v-bind:makePercent="makePercent"
-                       v-bind:division="division"
+      <FirstRowButtons
+        v-bind:clearDisplay="clearDisplay"
+        v-bind:makeNegativePositive="makeNegativePositive"
+        v-bind:makePercent="makePercent"
+        v-bind:division="division"
       />
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
-      <FifthRowButtons v-bind:displayBtnValue="displayBtnValue" 
-                       v-bind:makeDecimal="makeDecimal"
+      <FifthRowButtons
+        v-bind:displayBtnValue="displayBtnValue"
+        v-bind:makeDecimal="makeDecimal"
+        v-bind:result="result"
       />
     </article>
   </section>
@@ -32,14 +35,16 @@ export default {
     FourthRowButtons,
     FifthRowButtons
   },
-  props: ["displayBtnValue", 
-          "counter", 
-          "clearDisplay", 
-          "makeDecimal", 
-          "makeNegativePositive",
-          "makePercent",
-          "division"
-          ]
+  props: [
+    "displayBtnValue",
+    "counter",
+    "clearDisplay",
+    "makeDecimal",
+    "makeNegativePositive",
+    "makePercent",
+    "division",
+    "result"
+  ]
 };
 </script>
 

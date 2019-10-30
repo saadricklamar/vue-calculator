@@ -8,7 +8,8 @@
       v-bind:makeDecimal="makeDecimal"
       v-bind:makeNegativePositive="makeNegativePositive"
       v-bind:makePercent="makePercent"
-      v-bind:division="division" 
+      v-bind:division="division"
+      v-bind:result="result"
     />
   </div>
 </template>
@@ -28,11 +29,17 @@ export default {
   data() {
     return {
       counter: 0,
-      counter2: 0
+      operator: "",
+      isOperatorClicked: false,
+      num1: 0,
+      num2: 0
     };
   },
   methods: {
     displayBtnValue: function(e) {
+      if (this.counter === "" || this.isOperatorClicked === true) {
+        this.num2 = this.counter + e.target.value;
+      }
       if (this.counter === 0) {
         this.counter = "";
         this.counter = this.counter + e.target.value;
@@ -58,10 +65,16 @@ export default {
     makePercent: function() {
       this.counter = this.counter / 100;
     },
-    division: function() {
-      let num1 = this.counter;
-      this.counter = ""
-      
+    division: function(e) {
+      this.num1 = this.counter;
+      this.isOperatorClicked = true;
+      this.counter = "";
+      this.operator = e.target.value;
+    },
+    result: function() {
+      if (this.operator === "/") {
+        this.counter = this.num1 / this.num2;
+      }
     }
   }
 };
