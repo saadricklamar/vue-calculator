@@ -3,18 +3,14 @@
     <button v-on:click="clearDisplay()" class="ac">AC</button>
     <button v-on:click="makeNegativePositive()" class="plus-minus">+/-</button>
     <button v-on:click="makePercent()" class="percent">%</button>
-    <button v-on:click="division()" class="divide">/</button>
+    <button v-on:click="division($event)" class="divide" value="/">/</button>
   </section>
 </template>
 
 <script>
 export default {
   name: "FirstRowButtons",
-  props: ["clearDisplay", 
-          "makeNegativePositive", 
-          "makePercent",
-          "division"
-          ]
+  props: ["clearDisplay", "makeNegativePositive", "makePercent", "division"]
 };
 </script>
 
@@ -30,8 +26,8 @@ button {
 }
 
 button:hover {
- background-color: rgb(79,142,191);
- color: white;
+  background-color: rgb(79, 142, 191);
+  color: white;
 }
 
 .divide {

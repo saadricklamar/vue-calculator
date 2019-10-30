@@ -2,14 +2,14 @@
   <section class="fifth-row-buttons">
     <button v-on:click="displayBtnValue($event)" class="zero" value="0">0</button>
     <button v-on:click="makeDecimal()" class="decimal">.</button>
-    <button class="equals">=</button>
+    <button v-on:click="result()" class="equals">=</button>
   </section>
 </template>
 
 <script>
 export default {
   name: "FifthRowButtons",
-  props: ["displayBtnValue", "makeDecimal"]
+  props: ["displayBtnValue", "makeDecimal", "result"]
 };
 </script>
 
