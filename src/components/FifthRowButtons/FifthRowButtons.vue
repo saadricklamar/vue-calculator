@@ -22,4 +22,10 @@ export default {
 .zero {
   width: 170px;
 }
+
+@media (max-width: 1120px) {
+  .zero {
+    width: 112px;
+  }
+}
 </style>

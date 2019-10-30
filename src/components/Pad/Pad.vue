@@ -61,4 +61,10 @@ article {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+@media (max-width: 1120px) {
+  article {
+    height: 350px;
+  }
+}
 </style>
