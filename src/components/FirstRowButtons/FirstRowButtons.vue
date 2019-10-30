@@ -38,4 +38,11 @@ button:hover {
 .first-row-buttons {
   margin-top: 3%;
 }
+
+@media (max-width: 1120px) {
+  button {
+    height: 50px;
+    width: 50px;
+  }
+}
 </style>
