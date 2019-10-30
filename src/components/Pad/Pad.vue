@@ -8,7 +8,7 @@
         v-bind:division="division"
       />
       <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" v-bind:multiply="multiply" />
-      <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
+      <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" v-bind:subtract="subtract" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FifthRowButtons
         v-bind:displayBtnValue="displayBtnValue"
@@ -44,6 +44,7 @@ export default {
     "makePercent",
     "division",
     "multiply",
+    "subtract",
     "result"
   ]
 };

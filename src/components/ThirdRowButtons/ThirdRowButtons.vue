@@ -3,14 +3,14 @@
     <button v-on:click="displayBtnValue($event)" class="four" value="4">4</button>
     <button v-on:click="displayBtnValue($event)" class="five" value="5">5</button>
     <button v-on:click="displayBtnValue($event)" class="six" value="6">6</button>
-    <button class="subtract">-</button>
+    <button v-on:click="subtract($event)" class="subtract" value="-">-</button>
   </section>
 </template>
 
 <script>
 export default {
   name: "ThirdRowButtons",
-  props: ["displayBtnValue"]
+  props: ["displayBtnValue", "subtract"]
 };
 </script>
 
