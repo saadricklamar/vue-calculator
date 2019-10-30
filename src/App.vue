@@ -9,6 +9,7 @@
       v-bind:makeNegativePositive="makeNegativePositive"
       v-bind:makePercent="makePercent"
       v-bind:division="division"
+      v-bind:multiply="multiply"
       v-bind:result="result"
     />
   </div>
@@ -71,9 +72,18 @@ export default {
       this.counter = "";
       this.operator = e.target.value;
     },
+    multiply: function(e) {
+      this.num1 = this.counter;
+      this.isOperatorClicked = true;
+      this.counter = "";
+      this.operator = e.target.value;
+    },
     result: function() {
       if (this.operator === "/") {
         this.counter = this.num1 / this.num2;
+      }
+      if (this.operator === "x") {
+        this.counter = this.num1 * this.num2;
       }
     }
   }

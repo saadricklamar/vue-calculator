@@ -7,7 +7,7 @@
         v-bind:makePercent="makePercent"
         v-bind:division="division"
       />
-      <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" />
+      <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" v-bind:multiply="multiply" />
       <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
       <FifthRowButtons
@@ -43,6 +43,7 @@ export default {
     "makeNegativePositive",
     "makePercent",
     "division",
+    "multiply",
     "result"
   ]
 };
