@@ -93,6 +93,11 @@ describe("App", () => {
     wrapper.find("button.divide").trigger("click");
     expect(wrapper.vm.counter).toBe("");
   });
+  it("should set operator to / when the divide button is clicked", () => {
+    wrapper.vm.operator = "";
+    wrapper.find("button.divide").trigger("click");
+    expect(wrapper.vm.operator).toBe("/");
+  });
   it("should make isOperatorClicked truthy when the multiply button is clicked", () => {
     wrapper.vm.isOperatorClicked = false;
     wrapper.find("button.multiply").trigger("click");
@@ -100,8 +105,13 @@ describe("App", () => {
   });
   it("should set counter to an empty string when the multiply button is clicked", () => {
     wrapper.vm.counter = 9138;
-    wrapper.find("button.divide").trigger("click");
+    wrapper.find("button.multiply").trigger("click");
     expect(wrapper.vm.counter).toBe("");
+  });
+  it("should set operator to x when the multiply button is clicked", () => {
+    wrapper.vm.operator = "";
+    wrapper.find("button.multiply").trigger("click");
+    expect(wrapper.vm.operator).toBe("x");
   });
   it("should make isOperatorClicked truthy when the subtract button is clicked", () => {
     wrapper.vm.isOperatorClicked = false;
@@ -110,8 +120,13 @@ describe("App", () => {
   });
   it("should set counter to an empty string when the subtract button is clicked", () => {
     wrapper.vm.counter = 1234;
-    wrapper.find("button.divide").trigger("click");
+    wrapper.find("button.subtract").trigger("click");
     expect(wrapper.vm.counter).toBe("");
+  });
+  it("should set operator to - when the subtract button is clicked", () => {
+    wrapper.vm.operator = "";
+    wrapper.find("button.subtract").trigger("click");
+    expect(wrapper.vm.operator).toBe("-");
   });
   it("should make isOperatorClicked truthy when the add button is clicked", () => {
     wrapper.vm.isOperatorClicked = false;
@@ -120,8 +135,14 @@ describe("App", () => {
   });
   it("should set counter to an empty string when the add button is clicked", () => {
     wrapper.vm.counter = 4234;
-    wrapper.find("button.divide").trigger("click");
+    wrapper.find("button.add").trigger("click");
     expect(wrapper.vm.counter).toBe("");
   });
+  it("should set operator to + when the add button is clicked", () => {
+    wrapper.vm.operator = "";
+    wrapper.find("button.add").trigger("click");
+    expect(wrapper.vm.operator).toBe("+");
+  });
+  
   
 });
