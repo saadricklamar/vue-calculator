@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     displayBtnValue: function(e) {
-      if (this.counter === "" || this.isOperatorClicked === true) {
+      if (this.isOperatorClicked === true) {
         this.num2 = this.counter + e.target.value;
       }
       if (this.counter === 0) {
