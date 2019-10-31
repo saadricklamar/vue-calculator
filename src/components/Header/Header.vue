@@ -110,7 +110,7 @@ img {
 
 #menu {
   position: absolute;
-  height: 350px;
+  height: 580px;
   width: 250px;
   margin: -100px 0 0 -50px;
   padding: 50px;
