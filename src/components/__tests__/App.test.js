@@ -83,4 +83,25 @@ describe("App", () => {
     wrapper.find("button.nine").trigger("click");
     expect(wrapper.vm.counter).toBe("9");
   });
+  it("should make isOperatorClicked truthy when the divide button is clicked", () => {
+    wrapper.vm.isOperatorClicked = false;
+    wrapper.find("button.divide").trigger("click");
+    expect(wrapper.vm.isOperatorClicked).toBe(true);
+  });
+  it("should make isOperatorClicked truthy when the multiply button is clicked", () => {
+    wrapper.vm.isOperatorClicked = false;
+    wrapper.find("button.multiply").trigger("click");
+    expect(wrapper.vm.isOperatorClicked).toBe(true);
+  });
+  it("should make isOperatorClicked truthy when the subtract button is clicked", () => {
+    wrapper.vm.isOperatorClicked = false;
+    wrapper.find("button.subtract").trigger("click");
+    expect(wrapper.vm.isOperatorClicked).toBe(true);
+  });
+  it("should make isOperatorClicked truthy when the add button is clicked", () => {
+    wrapper.vm.isOperatorClicked = false;
+    wrapper.find("button.add").trigger("click");
+    expect(wrapper.vm.isOperatorClicked).toBe(true);
+  });
+  
 });
