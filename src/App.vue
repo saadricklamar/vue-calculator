@@ -8,9 +8,7 @@
       v-bind:makeDecimal="makeDecimal"
       v-bind:makeNegativePositive="makeNegativePositive"
       v-bind:makePercent="makePercent"
-      v-bind:division="division"
-      v-bind:multiply="multiply"
-      v-bind:subtract="subtract"
+      v-bind:arithmeticClicked="arithmeticClicked"
       v-bind:result="result"
     />
   </div>
@@ -67,33 +65,26 @@ export default {
     makePercent: function() {
       this.counter = this.counter / 100;
     },
-    division: function(e) {
-      this.num1 = this.counter;
-      this.isOperatorClicked = true;
-      this.counter = "";
-      this.operator = e.target.value;
-    },
-    multiply: function(e) {
-      this.num1 = this.counter;
-      this.isOperatorClicked = true;
-      this.counter = "";
-      this.operator = e.target.value;
-    },
-    subtract: function(e) {
+    arithmeticClicked: function(e) {
       this.num1 = this.counter;
       this.isOperatorClicked = true;
       this.counter = "";
       this.operator = e.target.value;
     },
     result: function() {
+      let num1 = Number(this.num1);
+      let num2 = Number(this.num2);
       if (this.operator === "/") {
-        this.counter = this.num1 / this.num2;
+        this.counter = num1 / num2;
       }
       if (this.operator === "x") {
-        this.counter = this.num1 * this.num2;
+        this.counter = num1 * num2;
       }
       if (this.operator === "-") {
-        this.counter = this.num1 - this.num2;
+        this.counter = num1 - num2;
+      }
+      if (this.operator === "+") {
+        this.counter = num1 + num2;
       }
     }
   }

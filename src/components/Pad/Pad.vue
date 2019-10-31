@@ -5,11 +5,20 @@
         v-bind:clearDisplay="clearDisplay"
         v-bind:makeNegativePositive="makeNegativePositive"
         v-bind:makePercent="makePercent"
-        v-bind:division="division"
+        v-bind:arithmeticClicked="arithmeticClicked"
       />
-      <SecondRowButtons v-bind:displayBtnValue="displayBtnValue" v-bind:multiply="multiply" />
-      <ThirdRowButtons v-bind:displayBtnValue="displayBtnValue" v-bind:subtract="subtract" />
-      <FourthRowButtons v-bind:displayBtnValue="displayBtnValue" />
+      <SecondRowButtons
+        v-bind:displayBtnValue="displayBtnValue"
+        v-bind:arithmeticClicked="arithmeticClicked"
+      />
+      <ThirdRowButtons
+        v-bind:displayBtnValue="displayBtnValue"
+        v-bind:arithmeticClicked="arithmeticClicked"
+      />
+      <FourthRowButtons
+        v-bind:displayBtnValue="displayBtnValue"
+        v-bind:arithmeticClicked="arithmeticClicked"
+      />
       <FifthRowButtons
         v-bind:displayBtnValue="displayBtnValue"
         v-bind:makeDecimal="makeDecimal"
@@ -42,9 +51,7 @@ export default {
     "makeDecimal",
     "makeNegativePositive",
     "makePercent",
-    "division",
-    "multiply",
-    "subtract",
+    "arithmeticClicked",
     "result"
   ]
 };
