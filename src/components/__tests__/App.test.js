@@ -167,6 +167,18 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.counter).toBe(84);
   });
+  it("should return the difference of two numbers when - is clicked", () => {
+    wrapper.vm.counter = 0;
+    wrapper.vm.num1 = 0;
+    wrapper.vm.num2 = 0;
+    wrapper.vm.operator = "";
+    wrapper.find("button.subtract").trigger("click");
+    wrapper.vm.num1 = 100;
+    wrapper.vm.num2 = 37;
+    wrapper.vm.operator = "-";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.counter).toBe(63);
+  });
   
   
 });
