@@ -143,6 +143,18 @@ describe("App", () => {
     wrapper.find("button.add").trigger("click");
     expect(wrapper.vm.operator).toBe("+");
   });
+  it("should return the division of two numbers when / is clicked", () => {
+    wrapper.vm.counter = 0;
+    wrapper.vm.num1 = 0;
+    wrapper.vm.num2 = 0;
+    wrapper.vm.operator = "";
+    wrapper.find("button.divide").trigger("click");
+    wrapper.vm.num1 = 9;
+    wrapper.vm.num2 = 2;
+    wrapper.vm.operator = "/";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.counter).toBe(4.5);
+  });
   
   
 });
