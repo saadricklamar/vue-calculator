@@ -69,6 +69,7 @@ article {
   background-color: #556884;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: 1px solid black;
 }
 
 @media (max-width: 1120px) {
