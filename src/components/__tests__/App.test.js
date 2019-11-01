@@ -155,6 +155,18 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.counter).toBe(4.5);
   });
+  it("should return the product of two numbers when x is clicked", () => {
+    wrapper.vm.counter = 0;
+    wrapper.vm.num1 = 0;
+    wrapper.vm.num2 = 0;
+    wrapper.vm.operator = "";
+    wrapper.find("button.multiply").trigger("click");
+    wrapper.vm.num1 = 21;
+    wrapper.vm.num2 = 4;
+    wrapper.vm.operator = "x";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.counter).toBe(84);
+  });
   
   
 });
