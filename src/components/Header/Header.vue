@@ -39,6 +39,10 @@ export default {
   padding-right: 5%;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h1,
 h4 {
   color: #42b983;
