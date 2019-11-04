@@ -9,7 +9,10 @@
         <ul id="menu">
           <h4 class="user-name">Your Recent Calculations</h4>
           <section v-for="recent in recents">
-            <p>{{recent}}</p>
+            <p>
+              {{recent}}
+              <button class="clear-specific">delete</button>
+            </p>
           </section>
           <button v-on:click="clearRecentCalculations()" class="clear-calcs">Clear All Calculations</button>
         </ul>
@@ -36,20 +39,6 @@ export default {
   justify-content: space-between;
 }
 
-.clear-calcs {
-  color: white;
-  height: 30px;
-  width: 180px;
-  font-size: 1rem;
-  background: #2c3e50;
-  border: none;
-}
-
-.clear-calcs:hover {
-  background: #f8f7db;
-  color: #42b983;
-}
-
 .calculator-title {
   display: flex;
   padding-right: 5%;
@@ -67,6 +56,33 @@ h4 {
 
 img {
   height: 100px;
+}
+
+.clear-calcs {
+  color: white;
+  height: 30px;
+  width: 180px;
+  font-size: 1rem;
+  background: #2c3e50;
+  border: none;
+}
+
+.clear-calcs:hover {
+  background: #f8f7db;
+  color: #42b983;
+}
+
+.clear-specific {
+  height: 0px;
+  width: 0px;
+  font-size: 1rem;
+  border-radius: 0px;
+  background: #42b983;
+  border: none;
+}
+
+.clear-specific:hover {
+  color: red;
 }
 
 #menuToggle {
