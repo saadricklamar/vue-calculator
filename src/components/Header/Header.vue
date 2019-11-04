@@ -8,6 +8,9 @@
         <span></span>
         <ul id="menu">
           <h4 class="user-name">Your Recent Calculations</h4>
+          <section v-for="recent in recents">
+            <p>{{recent}}</p>
+          </section>
         </ul>
       </div>
     </nav>
@@ -21,9 +24,7 @@
 <script>
 export default {
   name: "Header",
-  props: {
-    msg: String
-  }
+  props: ["recents"]
 };
 </script>
 
@@ -34,6 +35,10 @@ export default {
   justify-content: space-between;
 }
 
+button {
+  color: black;
+}
+
 .calculator-title {
   display: flex;
   padding-right: 5%;
@@ -41,11 +46,11 @@ export default {
 
 h1 {
   font-size: 2rem;
+  color: #42b983;
 }
 
-h1,
 h4 {
-  color: #42b983;
+  color: black;
 }
 
 img {
@@ -100,7 +105,7 @@ img {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #42b983;
+  background: black;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3) {
@@ -119,7 +124,7 @@ img {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #556884;
+  background: #42b983;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
