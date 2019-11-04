@@ -191,6 +191,9 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.counter).toBe(71.5);
   });
-  
-  
+  it("should clear all calculations when Clear All Calculations is clicked", () => {
+    wrapper.vm.recents = ["hi", "bye"];
+    wrapper.find("button.clear-calcs").trigger("click");
+    expect(wrapper.vm.recents).toStrictEqual([]);
+  });
 });
