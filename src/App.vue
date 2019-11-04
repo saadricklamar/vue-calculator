@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <Header msg="Welcome to Your Vue.js Calculator App" v-bind:recents="recents" />
+    <Header
+      msg="Welcome to Your Vue.js Calculator App"
+      v-bind:recents="recents"
+      v-bind:clearRecentCalculations="clearRecentCalculations"
+    />
     <Display v-bind:counter="counter" />
     <Pad
       v-bind:displayBtnValue="displayBtnValue"
@@ -100,6 +104,9 @@ export default {
         .concat(" = ", result)
         .concat(" at ", time);
       this.recents.push(final);
+    },
+    clearRecentCalculations: function() {
+      this.recents = [];
     }
   }
 };

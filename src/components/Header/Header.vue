@@ -11,6 +11,7 @@
           <section v-for="recent in recents">
             <p>{{recent}}</p>
           </section>
+          <button v-on:click="clearRecentCalculations()" class="clear-calcs">Clear All Calculations</button>
         </ul>
       </div>
     </nav>
@@ -24,7 +25,7 @@
 <script>
 export default {
   name: "Header",
-  props: ["recents"]
+  props: ["recents", "clearRecentCalculations"]
 };
 </script>
 
@@ -35,8 +36,18 @@ export default {
   justify-content: space-between;
 }
 
-button {
-  color: black;
+.clear-calcs {
+  color: white;
+  height: 30px;
+  width: 180px;
+  font-size: 1rem;
+  background: #2c3e50;
+  border: none;
+}
+
+.clear-calcs:hover {
+  background: #f8f7db;
+  color: #42b983;
 }
 
 .calculator-title {
@@ -51,6 +62,7 @@ h1 {
 
 h4 {
   color: black;
+  text-decoration: underline;
 }
 
 img {
