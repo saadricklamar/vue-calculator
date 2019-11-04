@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header msg="Welcome to Your Vue.js Calculator App" />
+    <Header msg="Welcome to Your Vue.js Calculator App" v-bind:recents="recents" />
     <Display v-bind:counter="counter" />
     <Pad
       v-bind:displayBtnValue="displayBtnValue"
@@ -32,7 +32,8 @@ export default {
       operator: "",
       isOperatorClicked: false,
       num1: 0,
-      num2: 0
+      num2: 0,
+      recents: []
     };
   },
   methods: {
@@ -75,6 +76,7 @@ export default {
       let num1 = Number(this.num1);
       let num2 = Number(this.num2);
       if (this.operator === "/") {
+        this.recentCalculations(num1, num2);
         this.counter = num1 / num2;
       }
       if (this.operator === "x") {
@@ -86,6 +88,18 @@ export default {
       if (this.operator === "+") {
         this.counter = num1 + num2;
       }
+    },
+    recentCalculations: function(num1, num2) {
+      let moment = require("moment");
+      let time = moment().format("MMMM Do YYYY, h:mm:ss a");
+      let result = num1 / num2;
+      let string1 = num1.toString();
+      let string2 = num2.toString();
+      let final = string1
+        .concat(" / ", string2)
+        .concat(" = ", result)
+        .concat(" at ", time);
+      this.recents.push(final);
     }
   }
 };
