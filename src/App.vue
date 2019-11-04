@@ -4,6 +4,7 @@
       msg="Welcome to Your Vue.js Calculator App"
       v-bind:recents="recents"
       v-bind:clearRecentCalculations="clearRecentCalculations"
+      v-bind:clearSpecificCalculation="clearSpecificCalculation"
     />
     <Display v-bind:counter="counter" />
     <Pad
@@ -107,6 +108,12 @@ export default {
     },
     clearRecentCalculations: function() {
       this.recents = [];
+    },
+    clearSpecificCalculation: function(event) {
+      let result = this.recents.filter(recent => {
+        return recent !== event;
+      });
+      this.recents = result;
     }
   }
 };
