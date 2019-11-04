@@ -11,7 +11,10 @@
           <section v-for="recent in recents">
             <p>
               {{recent}}
-              <button class="clear-specific">delete</button>
+              <button
+                v-on:click="clearSpecificCalculation(recent)"
+                class="clear-specific"
+              >delete</button>
             </p>
           </section>
           <button v-on:click="clearRecentCalculations()" class="clear-calcs">Clear All Calculations</button>
@@ -28,7 +31,7 @@
 <script>
 export default {
   name: "Header",
-  props: ["recents", "clearRecentCalculations"]
+  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation"]
 };
 </script>
 
