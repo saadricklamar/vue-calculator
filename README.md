@@ -4,10 +4,12 @@ This is a project I decided to take up on my spare time to keep my Vue.js skills
 
 ## Teck Stack
 
-* JavaScript
-* Vue.js
-* Vue Test Utilities
-* Jest/Enzyme
+* [JavaScript](https://www.javascript.com/)
+* [Vue.js](https://vuejs.org/)
+* [Vue Test Utils](https://vue-test-utils.vuejs.org/)
+* [Jest](https://jestjs.io/)
+* [Enzyme](https://airbnb.io/enzyme/)
+
 
 ## Screenshots
 
