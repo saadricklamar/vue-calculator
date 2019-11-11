@@ -8,13 +8,15 @@
         <span></span>
         <ul id="menu">
           <h4 class="user-name">Your Recent Calculations</h4>
-          <section v-for="recent in recents">
-            <p>
+          <section class="recent-box" v-for="recent in recents">
+            <p class="recent">
               {{recent}}
-              <button
+              <br>
+              <p class="timeStamp">{{timeStamp}}</p>
+               <button
                 v-on:click="clearSpecificCalculation(recent)"
                 class="clear-specific"
-              >delete</button>
+              >x</button>
             </p>
           </section>
           <button v-on:click="clearRecentCalculations()" class="clear-calcs">Clear All Calculations</button>
@@ -31,7 +33,7 @@
 <script>
 export default {
   name: "Header",
-  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation"]
+  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation", "timeStamp"]
 };
 </script>
 
@@ -42,14 +44,38 @@ export default {
   justify-content: space-between;
 }
 
+.recent-box {
+  background:cornsilk;
+  border-radius: 3px;
+  border: 1px solid #2c3e50;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 0 0 10px;
+}
+
 .calculator-title {
   display: flex;
   padding-right: 5%;
 }
 
+.timeStamp {
+  color: black;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.recent {
+  color: black;
+  margin: 0;
+  text-align: left;
+}
+
 h1 {
+  color: cornsilk;
   font-size: 2rem;
-  color: #42b983;
 }
 
 h4 {
@@ -62,12 +88,12 @@ img {
 }
 
 .clear-calcs {
-  color: white;
-  height: 30px;
-  width: 180px;
-  font-size: 1rem;
   background: #2c3e50;
   border: none;
+  color: white;
+  font-size: 1rem;
+  height: 30px;
+  width: 180px;
 }
 
 .clear-calcs:hover {
@@ -76,12 +102,17 @@ img {
 }
 
 .clear-specific {
-  height: 0px;
-  width: 0px;
-  font-size: 1rem;
+  background: cornsilk;
   border-radius: 0px;
-  background: #42b983;
   border: none;
+  bottom: 10px;
+  font-size: 1rem;
+  height: 0px;
+  left: 100px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 0px;
 }
 
 .clear-specific:hover {
