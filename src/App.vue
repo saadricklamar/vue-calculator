@@ -5,6 +5,7 @@
       v-bind:recents="recents"
       v-bind:clearRecentCalculations="clearRecentCalculations"
       v-bind:clearSpecificCalculation="clearSpecificCalculation"
+      v-bind:timeStamp="timeStamp"
     />
     <Display v-bind:counter="counter" />
     <Pad
@@ -38,7 +39,8 @@ export default {
       isOperatorClicked: false,
       num1: 0,
       num2: 0,
-      recents: []
+      recents: [],
+      timeStamp: ""
     };
   },
   methods: {
@@ -96,14 +98,13 @@ export default {
     },
     recentCalculations: function(num1, num2) {
       let moment = require("moment");
-      let time = moment().format("MMMM Do YYYY, h:mm:ss a");
+      this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
       let result = num1 / num2;
       let string1 = num1.toString();
       let string2 = num2.toString();
       let final = string1
         .concat(" / ", string2)
         .concat(" = ", result)
-        .concat(" at ", time);
       this.recents.push(final);
     },
     clearRecentCalculations: function() {
