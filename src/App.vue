@@ -87,12 +87,15 @@ export default {
         this.counter = num1 / num2;
       }
       if (this.operator === "x") {
+        this.recentCalculations(num1, num2);
         this.counter = num1 * num2;
       }
       if (this.operator === "-") {
+        this.recentCalculations(num1, num2);
         this.counter = num1 - num2;
       }
       if (this.operator === "+") {
+        this.recentCalculations(num1, num2);
         this.counter = num1 + num2;
       }
     },
@@ -103,7 +106,7 @@ export default {
       let string1 = num1.toString();
       let string2 = num2.toString();
       let final = string1
-        .concat(" / ", string2)
+        .concat(" ", this.operator, " ", string2)
         .concat(" = ", result)
       this.recents.push(final);
     },
