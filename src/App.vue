@@ -83,31 +83,30 @@ export default {
       let num1 = Number(this.num1);
       let num2 = Number(this.num2);
       if (this.operator === "/") {
-        this.recentCalculations(num1, num2);
         this.counter = num1 / num2;
+        this.recentCalculations(num1, num2);
       }
       if (this.operator === "x") {
-        this.recentCalculations(num1, num2);
         this.counter = num1 * num2;
+        this.recentCalculations(num1, num2);
       }
       if (this.operator === "-") {
-        this.recentCalculations(num1, num2);
         this.counter = num1 - num2;
+        this.recentCalculations(num1, num2);
       }
       if (this.operator === "+") {
-        this.recentCalculations(num1, num2);
         this.counter = num1 + num2;
+        this.recentCalculations(num1, num2);
       }
     },
     recentCalculations: function(num1, num2) {
       let moment = require("moment");
       this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
-      let result = num1 / num2;
       let string1 = num1.toString();
       let string2 = num2.toString();
       let final = string1
         .concat(" ", this.operator, " ", string2)
-        .concat(" = ", result)
+        .concat(" = ", this.counter)
       this.recents.push(final);
     },
     clearRecentCalculations: function() {
