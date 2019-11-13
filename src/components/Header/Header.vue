@@ -58,8 +58,8 @@ export default {
 }
 
 .timeStamp {
-  color: black;
-  font-size: 10px;
+  color: cornsilk;
+  font-size: 11px;
   margin: 0;
   padding: 0;
   text-align: left;
