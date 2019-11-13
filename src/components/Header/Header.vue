@@ -16,7 +16,7 @@
                <button
                 v-on:click="clearSpecificCalculation(recent)"
                 class="clear-specific"
-              >x</button>
+              >delete</button>
             </p>
           </section>
           <button v-on:click="clearRecentCalculations()" class="clear-calcs">Clear All Calculations</button>
@@ -45,9 +45,7 @@ export default {
 }
 
 .recent-box {
-  background:cornsilk;
-  border-radius: 3px;
-  border: 1px solid #2c3e50;
+  border-bottom: 1px solid black;
   height: 50px;
   width: 100%;
   margin-bottom: 10px;
@@ -106,7 +104,7 @@ img {
   border-radius: 0px;
   border: none;
   bottom: 10px;
-  font-size: 1rem;
+  font-size: .7rem;
   height: 0px;
   left: 100px;
   margin: 0;
