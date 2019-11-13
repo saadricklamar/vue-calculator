@@ -9,6 +9,7 @@ This is a project I decided to take up on my spare time to keep my Vue.js skills
 * [Vue Test Utils](https://vue-test-utils.vuejs.org/)
 * [Jest](https://jestjs.io/)
 * [Enzyme](https://airbnb.io/enzyme/)
+* [Moment.js](https://momentjs.com/)
 
 
 ## Screenshots
@@ -20,7 +21,8 @@ This is a project I decided to take up on my spare time to keep my Vue.js skills
 
 
 ### With Side Panel
-<img width="1241" alt="Screen Shot 2019-11-01 at 5 20 11 PM" src="https://user-images.githubusercontent.com/42000931/68061763-16f20b00-fccc-11e9-8b83-6546c725c00f.png">
+
+![Screen Shot 2019-11-12 at 5 08 45 PM](https://user-images.githubusercontent.com/42000931/68721308-2cd6ba00-056f-11ea-911c-665d45f8299c.png)
 
 
 
