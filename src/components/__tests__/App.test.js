@@ -201,4 +201,9 @@ describe("App", () => {
     wrapper.find("button.clear-calcs").trigger("click");
     expect(wrapper.vm.recents).toStrictEqual([]);
   });
+  it("should clear a specific calculation when delete is clicked", () => {
+    wrapper.vm.recents = ["hi", "bye"];
+    wrapper.find("button.clear-specific").trigger("click");
+    expect(wrapper.vm.recents).toStrictEqual(["bye"]);
+  });
 });
