@@ -28,6 +28,11 @@ describe("App", () => {
     wrapper.find("button.decimal").trigger("click");
     expect(wrapper.vm.counter).toBe("0.");
   });
+  it("should not add another decimal if a number is already a decimal", () => {
+    wrapper.vm.counter = "0.4";
+    wrapper.find("button.decimal").trigger("click");
+    expect(wrapper.vm.counter).toBe("0.4");
+  });
   it("should turn a number negative when +/- is clicked", () => {
     wrapper.vm.counter = 9;
     wrapper.find("button.plus-minus").trigger("click");
