@@ -222,6 +222,19 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.recents).toStrictEqual(["102 - 45 = 57"]);
   });
+  it("should push all product calculations to the recents array when equals is clicked", () => {
+    wrapper.vm.recents = [];
+    wrapper.vm.counter = 0;
+    wrapper.vm.num1 = 0;
+    wrapper.vm.num2 = 0;
+    wrapper.vm.operator = "";
+    wrapper.find("button.multiply").trigger("click");
+    wrapper.vm.num1 = 13;
+    wrapper.vm.num2 = 7;
+    wrapper.vm.operator = "x";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.recents).toStrictEqual(["13 x 7 = 91"]);
+  });
   it("should clear all calculations when Clear All Calculations is clicked", () => {
     wrapper.vm.recents = ["hi", "bye"];
     wrapper.find("button.clear-calcs").trigger("click");
