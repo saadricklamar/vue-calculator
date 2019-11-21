@@ -235,6 +235,19 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.recents).toStrictEqual(["13 x 7 = 91"]);
   });
+  it("should push all division calculations to the recents array when equals is clicked", () => {
+    wrapper.vm.recents = [];
+    wrapper.vm.counter = 0;
+    wrapper.vm.num1 = 0;
+    wrapper.vm.num2 = 0;
+    wrapper.vm.operator = "";
+    wrapper.find("button.divide").trigger("click");
+    wrapper.vm.num1 = 500;
+    wrapper.vm.num2 = 20;
+    wrapper.vm.operator = "/";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.recents).toStrictEqual(["500 / 20 = 25"]);
+  });
   it("should clear all calculations when Clear All Calculations is clicked", () => {
     wrapper.vm.recents = ["hi", "bye"];
     wrapper.find("button.clear-calcs").trigger("click");
