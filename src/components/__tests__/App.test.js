@@ -248,6 +248,11 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.recents).toStrictEqual(["500 / 20 = 25"]);
   });
+  it("should set the state of timeStamp with the current time", () => {
+    wrapper.vm.timeStamp = "";
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.timeStamp.includes(",")).toBe(true);
+  });
   it("should clear all calculations when Clear All Calculations is clicked", () => {
     wrapper.vm.recents = ["hi", "bye"];
     wrapper.find("button.clear-calcs").trigger("click");
