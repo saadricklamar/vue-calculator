@@ -13,6 +13,24 @@ describe("App", () => {
   it("counter is zero by default", () => {
     expect(wrapper.vm.counter).toBe(0);
   });
+  it("operator is an empty string by default", () => {
+    expect(wrapper.vm.operator).toBe("");
+  });
+  it("isOperatorClicked is false by default", () => {
+    expect(wrapper.vm.isOperatorClicked).toBe(false);
+  });
+  it("num1 is 0 by default", () => {
+    expect(wrapper.vm.num1).toBe(0);
+  });
+  it("num2 is 0 by default", () => {
+    expect(wrapper.vm.num2).toBe(0);
+  });
+  it("recents is an empty array by default", () => {
+    expect(wrapper.vm.recents).toStrictEqual([]);
+  });
+  it("timeStamp is an empty string by default", () => {
+    expect(wrapper.vm.timeStamp).toBe("");
+  });
   it("should set the display to 0 when AC is clicked", () => {
     wrapper.vm.counter = 74;
     wrapper.find("button.ac").trigger("click");
