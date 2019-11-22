@@ -248,6 +248,11 @@ describe("App", () => {
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.recents).toStrictEqual(["500 / 20 = 25"]);
   });
+  it("should have a length when equals is clicked", () => {
+    wrapper.vm.recents= [];
+    wrapper.find("button.equals").trigger("click");
+    expect(wrapper.vm.recents.length).toBe(1);
+  });
   it("should set the state of timeStamp with the current time", () => {
     wrapper.vm.timeStamp = "";
     wrapper.find("button.equals").trigger("click");
