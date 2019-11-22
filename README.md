@@ -11,6 +11,10 @@ This is a project I decided to take up on my spare time to keep my Vue.js skills
 * [Enzyme](https://airbnb.io/enzyme/)
 * [Moment.js](https://momentjs.com/)
 
+## Demo
+
+![2019-11-22 12 48 17](https://user-images.githubusercontent.com/42000931/69455814-6f925200-0d26-11ea-8b51-acf6d8ea2bd5.gif)
+
 
 ## Screenshots
 
