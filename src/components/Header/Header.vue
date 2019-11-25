@@ -10,7 +10,7 @@
           <h4 class="user-name">Your Recent Calculations</h4>
           <section class="recent-box" v-for="recent in recents">
             <p class="recent">
-              {{recent}}
+              <button class="specific-calc">{{recent}}</button>
               <br>
               <p class="timeStamp">{{timeStamp}}</p>
                <button
@@ -71,6 +71,16 @@ export default {
   text-align: left;
 }
 
+.specific-calc {
+  width: 150px;
+  height: 25px;
+  font-size: 16px;
+  background-color: #42b983;
+  border: none;
+  margin-bottom: 0;
+  text-align: left;
+}
+
 h1 {
   color: cornsilk;
   font-size: 2rem;
@@ -103,11 +113,11 @@ img {
   background: cornsilk;
   border-radius: 0px;
   border: none;
-  bottom: 10px;
+  bottom: 15px;
   font-size: .7rem;
   height: 0px;
   left: 100px;
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
   position: relative;
   width: 0px;
