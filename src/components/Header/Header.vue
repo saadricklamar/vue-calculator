@@ -31,9 +31,25 @@
 </template>
 
 <script>
+
+
 export default {
+  data() {
+    return {
+      timeStamp: ""
+    }
+  },
   name: "Header",
-  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation", "timeStamp"]
+  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation"],
+  methods: {
+    presentTime: function() {
+      let moment = require("moment");
+      this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
+    }
+  },
+  beforeUpdate(){
+    this.presentTime();
+  }
 };
 </script>
 
@@ -72,7 +88,7 @@ export default {
 }
 
 .specific-calc {
-  width: 150px;
+  width: 280px;
   height: 25px;
   font-size: 16px;
   background-color: #42b983;
