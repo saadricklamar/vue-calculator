@@ -28,9 +28,6 @@ describe("App", () => {
   it("recents is an empty array by default", () => {
     expect(wrapper.vm.recents).toStrictEqual([]);
   });
-  it("timeStamp is an empty string by default", () => {
-    expect(wrapper.vm.timeStamp).toBe("");
-  });
   it("should set the display to 0 when AC is clicked", () => {
     wrapper.vm.counter = 74;
     wrapper.find("button.ac").trigger("click");
