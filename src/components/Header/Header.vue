@@ -12,7 +12,7 @@
             <p class="recent">
               <button class="specific-calc">{{recent}}</button>
               <br>
-              <p class="timeStamp">{{timeStamp}}</p>
+              <p class="timeStamp">{{ timeStamp }}</p>
                <button
                 v-on:click="clearSpecificCalculation(recent)"
                 class="clear-specific"
@@ -47,7 +47,7 @@ export default {
       this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
     }
   },
-  beforeUpdate(){
+  mounted(){
     this.presentTime();
   }
 };
