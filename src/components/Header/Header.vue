@@ -10,7 +10,7 @@
           <h4 class="user-name">Your Recent Calculations</h4>
           <section class="recent-box" v-for="recent in recents">
             <p class="recent">
-              <button class="specific-calc">{{recent}}</button>
+              <button v-on:click="captureCalculation(recent)" v-b-tooltip.hover title="click to paste calculation" placement="top" class="specific-calc">{{recent}}</button>
               <br>
               <p class="timeStamp">{{ timeStamp }}</p>
                <button
@@ -45,6 +45,9 @@ export default {
     presentTime: function() {
       let moment = require("moment");
       this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
+    },
+    captureCalculation: function(event) {
+      conso
     }
   },
   mounted(){
@@ -61,11 +64,12 @@ export default {
 }
 
 .recent-box {
-  border-bottom: 1px solid black;
+  border: 1px solid black;
   height: 50px;
   width: 100%;
   margin-bottom: 10px;
   padding: 10px 0 0 10px;
+  border-radius: 5px;
 }
 
 .calculator-title {
@@ -88,13 +92,19 @@ export default {
 }
 
 .specific-calc {
-  width: 280px;
+  width: 250px;
   height: 25px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #42b983;
   border: none;
   margin-bottom: 0;
   text-align: left;
+  position: relative;
+  right: 11px;
+}
+
+.specific-calc:hover{
+  text-decoration: none;
 }
 
 h1 {
@@ -136,6 +146,7 @@ img {
   margin-bottom: 0;
   padding: 0;
   position: relative;
+  left: 90px;
   width: 0px;
 }
 
