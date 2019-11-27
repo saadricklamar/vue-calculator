@@ -28,6 +28,9 @@ describe("App", () => {
   it("recents is an empty array by default", () => {
     expect(wrapper.vm.recents).toStrictEqual([]);
   });
+  it("capturedCalculation is an empty array by default", () => {
+    expect(wrapper.vm.capturedCalculation).toStrictEqual([]);
+  });
   it("should set the display to 0 when AC is clicked", () => {
     wrapper.vm.counter = 74;
     wrapper.find("button.ac").trigger("click");
@@ -264,14 +267,9 @@ describe("App", () => {
     expect(wrapper.vm.recents).toStrictEqual(["500 / 20 = 25"]);
   });
   it("should have a length when equals is clicked", () => {
-    wrapper.vm.recents= [];
+    wrapper.vm.recents = [];
     wrapper.find("button.equals").trigger("click");
     expect(wrapper.vm.recents.length).toBe(1);
-  });
-  it("should set the state of timeStamp with the current time", () => {
-    wrapper.vm.timeStamp = "";
-    wrapper.find("button.equals").trigger("click");
-    expect(wrapper.vm.timeStamp.includes(",")).toBe(true);
   });
   it("should clear all calculations when Clear All Calculations is clicked", () => {
     wrapper.vm.recents = ["hi", "bye"];
