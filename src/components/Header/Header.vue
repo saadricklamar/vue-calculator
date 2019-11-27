@@ -10,7 +10,7 @@
           <h4 class="user-name">Your Recent Calculations</h4>
           <section class="recent-box" v-for="recent in recents">
             <p class="recent">
-              <button v-on:click="captureCalculation(recent)" v-b-tooltip.hover title="click to paste calculation" placement="top" class="specific-calc">{{recent}}</button>
+              <button v-on:click="captureCalculation(recent)" class="specific-calc">{{recent}}</button>
               <br>
               <p class="timeStamp">{{ timeStamp }}</p>
                <button
@@ -40,14 +40,11 @@ export default {
     }
   },
   name: "Header",
-  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation"],
+  props: ["recents", "clearRecentCalculations", "clearSpecificCalculation", "captureCalculation"],
   methods: {
     presentTime: function() {
       let moment = require("moment");
       this.timeStamp = moment().format("MMMM Do YYYY, h:mm:ss a");
-    },
-    captureCalculation: function(event) {
-      conso
     }
   },
   mounted(){

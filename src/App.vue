@@ -5,6 +5,7 @@
       v-bind:recents="recents"
       v-bind:clearRecentCalculations="clearRecentCalculations"
       v-bind:clearSpecificCalculation="clearSpecificCalculation"
+      v-bind:captureCalculation="captureCalculation"
     />
     <Display v-bind:counter="counter" />
     <Pad
@@ -113,6 +114,9 @@ export default {
         return recent !== event;
       });
       this.recents = result;
+    },
+    captureCalculation: function(event) {
+      console.log(event);
     }
   }
 };
