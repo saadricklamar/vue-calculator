@@ -39,7 +39,9 @@ export default {
       isOperatorClicked: false,
       num1: 0,
       num2: 0,
-      recents: []
+      recents: [],
+      capturedCalculation: [],
+      recentResult: ""
     };
   },
   methods: {
@@ -116,7 +118,18 @@ export default {
       this.recents = result;
     },
     captureCalculation: function(event) {
-      console.log(event);
+      this.capturedCalculation = event.split(" ").filter(item => {
+        if (
+          item !== "=" &&
+          item !== "x" &&
+          item !== "/" &&
+          item !== "+" &&
+          item !== "-"
+        ) {
+          return true;
+        }
+      });
+      this.recentResult = Number(this.capturedCalculation[2]);
     }
   }
 };
