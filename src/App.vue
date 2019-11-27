@@ -129,7 +129,7 @@ export default {
           return true;
         }
       });
-      this.recentResult = Number(this.capturedCalculation[2]);
+      this.counter = Number(this.capturedCalculation[2]);
     }
   }
 };
